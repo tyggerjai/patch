@@ -13,8 +13,6 @@
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
 #endif
 
-//#define OLED_DC 5 // OLED control pins are configurable.
-//#define OLED_CS 6 // These are different from other SSD1306 examples
 
 // Uses 18 and 19 on Teensy 3.1 - 18 for SDA, 19 for SCL
 #define OLED_RESET 4 // because the Pro Trinket has no pin 2 or 7.
@@ -43,8 +41,6 @@ void wipe_right(int next_bm){
 }
 void setup() {
 
-//DDRB = DDRC = DDRD = 0x00; // Set all pins to inputs and
-//PORTB = PORTC = PORTD = 0xFF; // enable pullups (for power saving)
 
 	display.begin(SSD1306_SWITCHCAPVCC);
 	display.stopscroll();
